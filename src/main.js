@@ -62,7 +62,9 @@ async function handleSubmit() {
           nearestCities[i].lon
         );
         const cityCode = cityData.current.condition.code;
-        if (checkMatch(cityCode)) {
+        const cityDayCode = cityData.forecast.forecastday[0].day.condition.code;
+
+        if (checkMatch(cityCode) || checkMatch(cityDayCode)) {
           setResponseBody(
             `You can find ${desiredWeatherString} weather in the nearby city of ${nearestCities[i].name}.`
           );
@@ -102,6 +104,20 @@ function generateForecast(data, cityName) {
     "Saturday",
   ];
   for (let i = 0; i < forecastArray.length; i++) {
+    //Todays Weather needs to be handled diffrently
+    if (i === 0) {
+      setForecastDay(
+        elements[i],
+        "Today",
+        celsiusToggle.checked
+          ? forecastArray[i].day.avgtemp_c
+          : forecastArray[i].day.avgtemp_f,
+        forecastArray[i].day.condition.text,
+        data.current.condition.text
+      );
+      continue;
+    }
+
     setTimeout(() => {
       const d = new Date(forecastArray[i].date);
       setForecastDay(
@@ -116,7 +132,13 @@ function generateForecast(data, cityName) {
   }
 }
 
-function setForecastDay(element, day, temp, weather) {
+function setForecastDay(element, day, temp, weather, current) {
+  if (current != undefined && current != "") {
+    element.getElementsByClassName(
+      "current-weather"
+    )[0].innerHTML = `Currently ${current}`;
+  }
+
   element.getElementsByClassName("day-header")[0].innerHTML = day;
   if (celsiusToggle.checked)
     element.getElementsByClassName("temp")[0].innerHTML = temp + " °C";

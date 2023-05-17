@@ -162,6 +162,9 @@ button:hover {
   background-color: rgba(70, 70, 70, 0.589);
   text-align: center;
 }
+.forecast-grid {
+  display: grid;
+}
 .forecast-header {
   padding-top: 70px;
   max-width: 80%;
@@ -169,4 +172,7 @@ button:hover {
 }
 .weather {
   font-size: 12px;
+}
+.current-weather {
+  font-size: 10px;
 }

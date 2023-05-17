@@ -23,8 +23,18 @@ cityTextBox.addEventListener("input", () => {
     }
   }
   if (cityValue.length > 3 && !apiCooldown) setDropdownOptions(cityValue);
+
+  if (cityValue.length <= 3) {
+    removeDropdown();
+  }
   chosenCity = [];
 });
+
+function removeDropdown() {
+  while (datalist.firstChild) {
+    datalist.removeChild(datalist.firstChild);
+  }
+}
 
 async function setDropdownOptions(cityValue) {
   if (apiCooldown) return;

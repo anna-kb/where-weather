@@ -38,7 +38,9 @@ export async function getCityNames(cityName) {
 export async function getNearestCities(cityId, radius) {
   try {
     const response = await fetch(
-      `${geoURL}${cityId}/nearbyCities?radius=${radius}&minPopulation=${minPopulation}&distanceUnit=mi`,
+      `${geoURL}${cityId}/nearbyCities?radius=${radius}&minPopulation=${
+        minPopulation - 50000
+      }&distanceUnit=mi`,
       apiOptions
     );
     const result = await response.text();

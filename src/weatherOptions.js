@@ -1,9 +1,9 @@
 export const weatherOptions = [
   { value: "sun", label: "Sunny" },
-  { value: "rain", label: "Rainy" },
+  { value: "snow", label: "Snowy" },
   { value: "storm", label: "Stormy" },
   { value: "fog", label: "Foggy" },
-  { value: "snow", label: "Snowy" },
+  { value: "rain", label: "Rainy" },
 ];
 
 export const dropdown = document.getElementById("dropdown");
@@ -47,7 +47,8 @@ async function getWeatherCodes() {
         return (
           line.toLowerCase().includes(option.value) ||
           (line.toLowerCase().includes("drizzle") && option.value === "rain") ||
-          (line.toLowerCase().includes("shower") && option.value === "rain")
+          (line.toLowerCase().includes("shower") && option.value === "rain") ||
+          (line.toLowerCase().includes("clear") && option.value === "sun")
         );
       });
 
@@ -59,6 +60,8 @@ async function getWeatherCodes() {
               ? "rain"
               : match.value === "shower"
               ? "rain"
+              : match.value === "clear"
+              ? "sun"
               : match.value,
         });
       }
