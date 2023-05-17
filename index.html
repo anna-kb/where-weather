@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="background-img" id="body-background">
+    <div class="weather-grid simple-container">
+      <div>
+        <div class="input-container">
+          <label for="dropdown">I want it to be</label>
+          <select id="dropdown" class="input-box"></select>
+        </div>
+        <div class="input-container">
+          <label for="textbox">Somewhere near</label>
+          <input
+            type="text"
+            id="city-text-box"
+            list="datalist"
+            class="input-box"
+          />
+          <datalist id="datalist"></datalist>
+        </div>
+      </div>
+      <div>
+        <img src="" id="weather-img" />
+      </div>
+      <div>
+        <button id="submit">Find Nearest</button>
+        <div class="toggle-radio">
+          <input type="radio" name="default" id="fahrenheit" />
+          <label for="fahrenheit">Fahrenheit</label>
+          <input type="radio" name="default" id="celsius" checked />
+          <label for="celsius">Celsius</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="response-body simple-container" id="response-body">
+      The nearest city is...
+    </div>
+    <h2 id="forecast-header" class="forecast-header" hidden></h2>
+    <div class="forecast-container" id="forecast-container">
+      <div class="forecast-day" hidden>
+        <h2 class="day-header"></h2>
+        <div class="temp">20c</div>
+        <div class="weather">Rainy</div>
+      </div>
+      <div class="forecast-day" hidden>
+        <h2 class="day-header"></h2>
+        <div class="temp">20c</div>
+        <div class="weather">Rainy</div>
+      </div>
+      <div class="forecast-day" hidden>
+        <h2 class="day-header"></h2>
+        <div class="temp">20c</div>
+        <div class="weather">Rainy</div>
+      </div>
+      <div class="forecast-day" hidden>
+        <h2 class="day-header"></h2>
+        <div class="temp">20c</div>
+        <div class="weather">Rainy</div>
+      </div>
+      <div class="forecast-day" hidden>
+        <h2 class="day-header"></h2>
+        <div class="temp">20c</div>
+        <div class="weather">Rainy</div>
+      </div>
+      <div class="forecast-day" hidden>
+        <h2 class="day-header"></h2>
+        <div class="temp">20c</div>
+        <div class="weather">Rainy</div>
+      </div>
+      <div class="forecast-day" hidden>
+        <h2 class="day-header"></h2>
+        <div class="temp">20c</div>
+        <div class="weather">Rainy</div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="./src/main.js"></script>
+</html>

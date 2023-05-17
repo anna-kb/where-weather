@@ -1,0 +1,172 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.75em;
+  font-size: 16px;
+  background-color: #222;
+  color: #aaa;
+  font-weight: bold;
+}
+
+.background-img {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.storm {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(./storm_background.jpg);
+}
+
+.rain {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(./rain_background.jpg);
+}
+
+.sun {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(./sun_background.jpg);
+}
+
+.snow {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(./snow_background.jpg);
+}
+
+.fog {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(./fog_background.jpg);
+}
+.weather-grid {
+  display: grid;
+  grid-template-columns: 65% 35%;
+}
+
+.simple-container {
+  max-width: 675px;
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  align-items: center;
+}
+
+.simple-print {
+  fill: white;
+  stroke: white;
+}
+.simple-print svg {
+  height: 100%;
+}
+
+.simple-close {
+  color: white;
+  border-color: white;
+}
+
+.simple-ext-info {
+  border-top: 1px solid #aaa;
+}
+
+p {
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+}
+
+select {
+  background-color: #c9c9c9;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 5px;
+  width: 200px;
+  appearance: none;
+  background-position: right center;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  background-color: #c9c9c9;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 5px;
+  width: 200px;
+}
+
+button {
+  background-color: #4c6faf;
+  max-width: 150px;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: box-shadow;
+}
+
+button:hover {
+  box-shadow: 0 8px 16px 0 rgba(141, 141, 141, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.input-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.input-box {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.forecast-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  max-width: 80%;
+  margin: auto;
+}
+
+.forecast-day {
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 10px;
+  background-color: rgba(70, 70, 70, 0.589);
+  text-align: center;
+}
+.forecast-header {
+  padding-top: 70px;
+  max-width: 80%;
+  margin: auto;
+}
+.weather {
+  font-size: 12px;
+}
