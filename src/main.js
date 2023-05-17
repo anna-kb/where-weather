@@ -29,9 +29,9 @@ async function handleSubmit() {
   }
   resetForecast();
   const initialCityData = await getWeatherData(chosenCity[0], chosenCity[1]);
-
+  // does the current weather right now satisfy?
   const code = initialCityData.current.condition.code;
-  const initialCheck = checkMatch(`${code}`); // does the current weather right now satify?
+  const initialCheck = checkMatch(`${code}`);
   const desiredWeatherString = dropdown.options[dropdown.selectedIndex].label;
   setResponseBody(
     `Searching for the nearest city with ${desiredWeatherString} weather...`
@@ -42,9 +42,10 @@ async function handleSubmit() {
     );
     generateForecast(initialCityData, cityTextBox.value);
   } else {
+    // does the average weather for the day satisfy?
     const secondCode =
       initialCityData.forecast.forecastday[0].day.condition.code;
-    const secondCheck = checkMatch(`${secondCode}`); // does the average weather for the daysatify?
+    const secondCheck = checkMatch(`${secondCode}`);
 
     if (secondCheck) {
       setResponseBody(
