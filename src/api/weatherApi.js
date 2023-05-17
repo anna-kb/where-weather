@@ -1,4 +1,4 @@
-const weatherUrl = `http://api.weatherapi.com/v1/forecast.json?key=${
+const weatherUrl = `https://api.weatherapi.com/v1/forecast.json?key=${
   import.meta.env.VITE_WEATHER_API_KEY
 }&q=`;
 

@@ -22,7 +22,7 @@ cityTextBox.addEventListener("input", () => {
       return;
     }
   }
-  if (cityValue.length > 1 && !apiCooldown) setDropdownOptions(cityValue);
+  if (cityValue.length > 3 && !apiCooldown) setDropdownOptions(cityValue);
   chosenCity = [];
 });
 
