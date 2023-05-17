@@ -62,10 +62,6 @@ async function handleSubmit() {
           nearestCities[i].lon
         );
         const cityCode = cityData.current.condition.code;
-
-        console.log(
-          `${nearestCities[i].name} has the weather code ${cityCode}`
-        );
         if (checkMatch(cityCode)) {
           setResponseBody(
             `You can find ${desiredWeatherString} weather in the nearby city of ${nearestCities[i].name}.`
