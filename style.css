@@ -22,7 +22,7 @@ body {
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url(./storm_background.jpg);
+    url(/where-weather/storm_background.jpg);
 }
 
 .rain {
@@ -31,7 +31,7 @@ body {
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url(./rain_background.jpg);
+    url(/where-weather/rain_background.jpg);
 }
 
 .sun {
@@ -40,12 +40,12 @@ body {
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url(./sun_background.jpg);
+    url(/where-weather/sun_background.jpg);
 }
 
 .snow {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(./snow_background.jpg);
+    url(/where-weather/snow_background.jpg);
 }
 
 .fog {
@@ -54,7 +54,7 @@ body {
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url(./fog_background.jpg);
+    url(/where-weather/fog_background.jpg);
 }
 .weather-grid {
   display: grid;

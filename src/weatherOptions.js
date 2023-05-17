@@ -23,7 +23,7 @@ displayImage(dropdown.value);
 function displayImage(value) {
   const body = document.getElementById("body-background");
 
-  const defaultImg = `../${value}.png`;
+  const defaultImg = `/where-weather/${value}.png`;
   image.setAttribute("src", defaultImg);
 
   const defaultString = "background-img ";
@@ -37,7 +37,7 @@ function displayImage(value) {
 
 export const weatherCodes = [];
 async function getWeatherCodes() {
-  const response = await fetch("../data/weather_conditions.csv");
+  const response = await fetch("/where-weather/data/weather_conditions.csv");
   const data = await response.text();
   try {
     const splitData = data.split("\n");
