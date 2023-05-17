@@ -46,8 +46,8 @@ async function getWeatherCodes() {
       const match = weatherOptions.find((option) => {
         return (
           line.toLowerCase().includes(option.value) ||
-          line.toLowerCase().includes("drizzle") ||
-          line.toLowerCase().includes("shower")
+          (line.toLowerCase().includes("drizzle") && option.value === "rain") ||
+          (line.toLowerCase().includes("shower") && option.value === "rain")
         );
       });
 
@@ -56,9 +56,9 @@ async function getWeatherCodes() {
           code: line.substring(0, line.indexOf(",")),
           matchingOption:
             match.value === "drizzle"
-              ? rain
+              ? "rain"
               : match.value === "shower"
-              ? rain
+              ? "rain"
               : match.value,
         });
       }
