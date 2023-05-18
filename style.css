@@ -146,11 +146,11 @@ button:hover {
 
 .forecast-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
   padding-top: 5px;
   padding-bottom: 5px;
-  max-width: 80%;
+  max-width: 60%;
   margin: auto;
 }
 
@@ -167,7 +167,7 @@ button:hover {
 }
 .forecast-header {
   padding-top: 70px;
-  max-width: 80%;
+  max-width: 60%;
   margin: auto;
 }
 .weather {

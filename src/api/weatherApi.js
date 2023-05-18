@@ -4,7 +4,7 @@ const weatherUrl = `https://api.weatherapi.com/v1/forecast.json?key=${
 
 export async function getWeatherData(lat, lon) {
   const response = await fetch(
-    `${weatherUrl}${lat},${lon}&days=7&aqi=no&alerts=no`
+    `${weatherUrl}${lat},${lon}&days=3&aqi=no&alerts=no`
   );
 
   const data = await response.json();
